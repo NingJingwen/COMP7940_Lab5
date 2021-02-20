@@ -72,7 +72,7 @@ def hello_command(update: Update, context: CallbackContext) -> None:
         redis1.incr(msg)
         update.message.reply_text('Good day, ' + msg +  '!')
     except (IndexError, ValueError):
-        update.message.reply_text('Usage: /add <keyword>')
+        update.message.reply_text('Usage: /hello <keyword>')
 
 if __name__ == '__main__':
     main()
